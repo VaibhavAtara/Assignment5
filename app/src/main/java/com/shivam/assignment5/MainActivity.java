@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 aniRotateClk = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate);
-                aniRotateClk.setDuration(5000);
+                aniRotateClk.setDuration(3000);
                 iv.startAnimation(aniRotateClk);
                 circularSeekBar.setProgress(10);
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 rotate.setElevation((float)0.0);
 
                 value = (int)circularSeekBar.getProgress();
-                Toast.makeText(getApplicationContext(),"Current speed:"+value,Toast.LENGTH_SHORT).show();
+
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
